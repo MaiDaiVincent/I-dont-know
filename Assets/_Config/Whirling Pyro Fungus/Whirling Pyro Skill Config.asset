@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583da4ab6bb335f45a02adf5b0e73d5d, type: 3}
+  m_Name: Whirling Pyro Skill Config
+  m_EditorClassIdentifier: 
+  nA_SkillConfig:
+    description: 
+    cooldown: 0
+    moveSpeed: 10
+    range: 0
+    activeTime: 0
+    valuePercent: 100
+    skillPrefab: {fileID: 787565772345051794, guid: f211cd3492c0eed47915fc176f909e2e, type: 3}
+  eS_SkillConfig:
+    description: 
+    cooldown: 10
+    moveSpeed: 10
+    range: 0
+    activeTime: 5
+    valuePercent: 200
+    skillPrefab: {fileID: 6646336128335499370, guid: b73238fdf9df30e4cb5f5ee83706d8e4, type: 3}
+  eB_SkillConfig:
+    description: 
+    cooldown: 5
+    moveSpeed: 10
+    range: 0
+    activeTime: 0
+    valuePercent: 1000
+    skillPrefab: {fileID: 7025213192044054502, guid: a5bd80fcd88b4494e8750e846dedaba0, type: 3}

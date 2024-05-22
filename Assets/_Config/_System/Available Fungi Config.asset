@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21aee361b80773041832daf4e861c2d7, type: 3}
+  m_Name: Available Fungi Config
+  m_EditorClassIdentifier: 
+  fungusPackedConfigList:
+  - fungusNameType: 2
+    config: {fileID: 11400000, guid: 4068ba145bac18d4696855d71694a930, type: 2}
+    stats: {fileID: 11400000, guid: 691144a45ac3f3345ae0a57803894189, type: 2}
+    skillConfig: {fileID: 11400000, guid: cc964e476c0309b46afdad562492bda2, type: 2}
+    fungusInfoReader: {fileID: 363848762481708227, guid: f524830e12f160c4187494544d3cab6f, type: 3}
+  - fungusNameType: 4
+    config: {fileID: 11400000, guid: ba3e98f76cf853048a3828f72e9e4184, type: 2}
+    stats: {fileID: 11400000, guid: 6a4f0d664351e514d9ec5b2d7eac9598, type: 2}
+    skillConfig: {fileID: 11400000, guid: 0ead91b60d44f7e438d22031d4801e53, type: 2}
+    fungusInfoReader: {fileID: 6329445916849355690, guid: 08a56d1dacf99f144ad6f35a04e85d3c, type: 3}
+  - fungusNameType: 5
+    config: {fileID: 11400000, guid: c7c6a9df3cbd6f04eb7cdbbaf9728680, type: 2}
+    stats: {fileID: 11400000, guid: 85fbbfdda302e064fb3d3059a14de2fa, type: 2}
+    skillConfig: {fileID: 11400000, guid: 9acf53d39f3d4c9408955ce8ec65c7f2, type: 2}
+    fungusInfoReader: {fileID: 6211207500067618760, guid: 5ad9d2a4df06285489912d3256f327ee, type: 3}
+  - fungusNameType: 3
+    config: {fileID: 11400000, guid: 54593eb35d04c7f49aa1f414d96813ac, type: 2}
+    stats: {fileID: 11400000, guid: e6f6cf2767b5ce948b2b4566da208c8f, type: 2}
+    skillConfig: {fileID: 11400000, guid: 07d6033156138744b8feea9208b4d9d6, type: 2}
+    fungusInfoReader: {fileID: 7706793565005717724, guid: 0128501e3f8c13e4f98ee33ab0495476, type: 3}

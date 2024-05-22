@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583da4ab6bb335f45a02adf5b0e73d5d, type: 3}
+  m_Name: Whirling Electro Skill Config
+  m_EditorClassIdentifier: 
+  skillList: []
+  nA_SkillConfig:
+    description: 
+    cooldown: 0
+    moveSpeed: 10
+    range: 0
+    activeTime: 0
+    valuePercent: 100
+    skillPrefab: {fileID: 787565772345051794, guid: f211cd3492c0eed47915fc176f909e2e, type: 3}
+  eS_SkillConfig:
+    description: 
+    cooldown: 15
+    moveSpeed: 0
+    range: 0
+    activeTime: 10
+    valuePercent: 100
+    skillPrefab: {fileID: 9055931583751096636, guid: 68cb4d34d92864448b8a095654b02ff7, type: 3}
+  eB_SkillConfig:
+    description: 
+    cooldown: 20
+    moveSpeed: 0
+    range: 0
+    activeTime: 0
+    valuePercent: 300
+    skillPrefab: {fileID: 2724938859427836975, guid: bb49891f956d20345a73eb0b35c78461, type: 3}
+  references:
+    version: 2
+    RefIds: []

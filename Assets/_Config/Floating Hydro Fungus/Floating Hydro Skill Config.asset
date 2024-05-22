@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583da4ab6bb335f45a02adf5b0e73d5d, type: 3}
+  m_Name: Floating Hydro Skill Config
+  m_EditorClassIdentifier: 
+  skillList:
+  - rid: 997431274142695431
+  - rid: 997431274142695432
+  nA_SkillConfig:
+    description: 
+    cooldown: 0
+    moveSpeed: 10
+    range: 0
+    activeTime: 0
+    valuePercent: 100
+    skillPrefab: {fileID: 787565772345051794, guid: f211cd3492c0eed47915fc176f909e2e, type: 3}
+  eS_SkillConfig:
+    description: 
+    cooldown: 10
+    moveSpeed: 10
+    range: 0
+    activeTime: 0
+    valuePercent: 300
+    skillPrefab: {fileID: 2037607434511207345, guid: ee4b904cc9f127e4eb6712279692e1c7, type: 3}
+  eB_SkillConfig:
+    description: 
+    cooldown: 15
+    moveSpeed: 10
+    range: 1
+    activeTime: 0
+    valuePercent: 700
+    skillPrefab: {fileID: 2269854418176154011, guid: 6e42cd53254757748bbdf86faf5d7ce0, type: 3}
+  references:
+    version: 2
+    RefIds:
+    - rid: 997431274142695431
+      type: {class: Healing, ns: , asm: Assembly-CSharp}
+      data:
+        description: 
+        cooldown: 0
+        valueHealing: 100
+    - rid: 997431274142695432
+      type: {class: Shield, ns: , asm: Assembly-CSharp}
+      data:
+        description: 
+        cooldown: 0
+        valueShield: 100

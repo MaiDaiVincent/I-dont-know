@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5182359435b1ac34a858082a80daeec7, type: 3}
+  m_Name: Nahida Boss Config
+  m_EditorClassIdentifier: 
+  bossName: Nahida
+  bossDescription: 
+  bossModelSprite: {fileID: 21300000, guid: d27a2ac49d241594b8e5016e6fca0ea9, type: 3}
+  bossAvatar: {fileID: 1055689657, guid: 47d10642c04df50428c5cb781180a3db, type: 3}
+  bossColor: {r: 0.5411765, g: 1, b: 0.1764706, a: 1}
+  fungusElemental:
+    elementalType: 6
+    elementalSprite: {fileID: 21300000, guid: e810f339eb73c8149b05229be8cb86c7, type: 3}
