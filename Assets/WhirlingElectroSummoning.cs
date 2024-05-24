@@ -32,8 +32,8 @@ public class WhirlingElectroSummoning : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
 
+            if (targetDetector.Target() == null) StopCoroutine(AttackCoroutine());
             target = targetDetector.Target();
-            if (target == null) StopCoroutine(AttackCoroutine());
 
             whirlingElectroLightning = poolManager.SpawnObj(whirlingElectroLightningPrefab, target.position, poolType);
 

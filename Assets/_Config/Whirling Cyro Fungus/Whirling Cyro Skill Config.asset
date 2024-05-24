@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583da4ab6bb335f45a02adf5b0e73d5d, type: 3}
   m_Name: Whirling Cyro Skill Config
   m_EditorClassIdentifier: 
+  skillList: []
   nA_SkillConfig:
     description: 
     cooldown: 0
@@ -26,7 +27,7 @@ MonoBehaviour:
     moveSpeed: 0
     range: 0
     activeTime: 10
-    valuePercent: 500
+    valuePercent: 100
     skillPrefab: {fileID: 5912716066866039054, guid: 75f3bb56e102dde4690324f046e5ed39, type: 3}
   eB_SkillConfig:
     description: 
@@ -36,3 +37,6 @@ MonoBehaviour:
     activeTime: 10
     valuePercent: 50
     skillPrefab: {fileID: 5723225801821419268, guid: 37ab81f90c7bca143b08a9832b3cd06f, type: 3}
+  references:
+    version: 2
+    RefIds: []

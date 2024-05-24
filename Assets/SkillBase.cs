@@ -67,6 +67,8 @@ public class SkillBase : MonoBehaviour, ISkill
         TextPopUp textPopUp;
         textPopUp = poolManager.SpawnObj(poolManager.GetTextPopUp(), collisionPos, PoolType.TextPopUp);
         textPopUp.SetPopUpDamage(damage, CanCrit, PopUpColor);
+
+        CameraShake.instance.Shake(1, 0.2f);
     }
     public virtual void ShowcaseSkill(Transform target, Vector2 direction)
     {

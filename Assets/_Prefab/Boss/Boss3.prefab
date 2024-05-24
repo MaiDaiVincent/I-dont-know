@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 888011471522299366}
   - component: {fileID: 3571035536493219082}
   - component: {fileID: 2487379171314821281}
-  - component: {fileID: 2817150309824884074}
   m_Layer: 6
   m_Name: Boss3
   m_TagString: Boss
@@ -113,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7231b0227a9a74db49080591511620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &888011471522299366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,8 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef247e616077857419ae55f72080db8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countChangeDamageSlider: 0
-  takingDamage: 0
 --- !u!114 &3571035536493219082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b6b39ebffaebc4a9e7ab6e1cf47537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3559779094232262940, guid: 60d9b7f023fcb31428a5fa6f1a1b31bb, type: 3}
+  bossSkill1: {fileID: 0}
+  bossSkill2: {fileID: 0}
+  bossSkill3: {fileID: 0}
+  canAtk: 0
 --- !u!114 &2487379171314821281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,34 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f62c19b0c1810f46999e3a2b329c997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetInfo: {fileID: 0}
   model: {fileID: 1787526881069929797}
   currentStatusHUD: {fileID: 0}
-  bossData:
-    maxHealth: 0
-    health: 0
-    damage: 0
-    lv: 0
-    moveSpeed: 0
-    bossConfig: {fileID: 0}
-    bossStats: {fileID: 0}
---- !u!114 &2817150309824884074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4079994705232845976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 203a72d3b4c3f874c89bfb4ff665b9f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliderList: []
-  radius: 30
-  layerCheck:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &7096569817789281474
 GameObject:
   m_ObjectHideFlags: 0

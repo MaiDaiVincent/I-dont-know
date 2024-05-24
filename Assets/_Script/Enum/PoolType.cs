@@ -25,6 +25,9 @@ public enum PoolType
     FungusExplosion,
     BossBullet,
     BossExplosion,
+    BossSkill1,
+    BossSkill2,
+    BossSkill3,
 
 
     TextPopUp,

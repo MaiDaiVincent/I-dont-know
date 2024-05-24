@@ -1,12 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[Serializable]
+public class Spawn
+{
+    public GameObject enemyPrefab;
+    public Transform spawnPoint;
+}
+
+[Serializable]
+public class Wave
+{
+    public bool isEndWave = false;
+    public List<Spawn> spawnList;
+}
+
 public class SpawnerManager : Singleton<SpawnerManager>
 {
+    public Wave currentWave;
+
     [SerializeField] private Transform root; //obj player holder
 
+    [SerializeField] private List<Wave> waveList;
+
     private ManagerRoot managerRoot => ManagerRoot.Instance;
+    private EnemyManager enemyManager => EnemyManager.Instance;
     private void Start()
     {
         Init();
@@ -14,10 +35,13 @@ public class SpawnerManager : Singleton<SpawnerManager>
     void Init()
     {
         SpawnBossInit();
+        //SpawnWave();
         SpawnFungusInit();
     }
     public void SpawnFungusInit()
     {
+        if (managerRoot == null) return;
+
         List<FungusNameType> fungusNameTypeList = managerRoot.actionFungusNameList;
         AvailableFungiConfig availableFungiConfig = managerRoot.ManagerRootConfig.availableFungiConfig;
 
@@ -69,6 +93,8 @@ public class SpawnerManager : Singleton<SpawnerManager>
 
     public void SpawnBossInit()
     {
+        if (managerRoot == null) return;
+
         BossNameType actionBossNameType = managerRoot.actionBossNameType;
         AvailableBossConfig availableBossConfig = managerRoot.ManagerRootConfig.availableBossConfig;
 
@@ -91,5 +117,45 @@ public class SpawnerManager : Singleton<SpawnerManager>
 
         EventManager.ActionOnSpawnBossInit(bossInfo);
     }
+    public void SpawnWave()
+    {
+        if (waveList.Count <= 0 || !WaveEnded()) return;
 
+        if(currentWave != null && currentWave == waveList[waveList.Count - 1])
+        {
+            SpawnBossInit();
+            return;
+        }
+        foreach (var wave in waveList)
+        {
+            if (!wave.isEndWave)
+            {
+                currentWave = wave;
+                SpawnEnemy(wave.spawnList);
+                break;
+            }
+        }
+    }
+    public void SpawnEnemy(List<Spawn> spawnList)
+    {
+        for (int i = 0; i < spawnList.Count; i++)
+        {
+            var spawn = spawnList[i];
+            var enemy = Instantiate(spawn.enemyPrefab, spawn.spawnPoint);
+            enemy.transform.SetParent(enemyManager.enemyHolder.transform);
+        }
+    }
+    bool WaveEnded()
+    {
+        if (enemyManager.enemyHolder.transform.childCount == 0) return true;
+        return false;
+    }
+
+    void CheckWave()
+    {
+        if (WaveEnded())
+        {
+            SpawnWave();
+        }
+    }
 }

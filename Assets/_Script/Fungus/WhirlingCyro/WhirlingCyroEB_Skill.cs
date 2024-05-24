@@ -30,7 +30,6 @@ public class WhirlingCyroEB_Skill : EB_Skill
         {
             if (!polygonCollider2D.enabled)
             {
-                Debug.Log("enable");
                 polygonCollider2D.enabled = true;
             }
             yield return new WaitForSeconds(0.5f);

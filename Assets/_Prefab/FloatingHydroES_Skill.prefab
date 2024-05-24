@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1143349599381050098}
   - component: {fileID: 2037607434511207345}
   - component: {fileID: 5926123004178389257}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: FloatingHydroES_Skill
   m_TagString: FungusBullet
   m_Icon: {fileID: 0}
@@ -167,6 +167,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1088
   detectionEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  detectionStayEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &2037607434511207345

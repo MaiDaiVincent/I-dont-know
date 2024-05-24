@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Nahida Boss Stat
   m_EditorClassIdentifier: 
   maxHealth: 10000
-  damage: 10000
+  damage: 1000
   lv: 1
   moveSpeed: 3
+  critRate: 5
+  critDamage: 50

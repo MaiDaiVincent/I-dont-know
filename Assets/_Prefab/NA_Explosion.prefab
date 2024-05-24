@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141703890885138447}
   - component: {fileID: 6891930824014245391}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NA_Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,6 +236,14 @@ PrefabInstance:
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3799754282803556739, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906857927591445839, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4703714968207440667, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -283,6 +291,10 @@ PrefabInstance:
     - target: {fileID: 6316808685282885652, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
       propertyPath: m_SortingLayerID
       value: 415637829
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880655906247829272, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7709648845920011721, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
       propertyPath: m_SortingLayer
@@ -367,6 +379,10 @@ PrefabInstance:
     - target: {fileID: 9020032885337694855, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
       propertyPath: m_Name
       value: ExplosionEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020032885337694855, guid: 53627ed009b7e6841a1e5b66f357c437, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStamina: 100
   maxHealth: 10000
-  atk: 10000
+  atk: 100
   lv: 1
   moveSpeed: 3
   dashTime: 0.2

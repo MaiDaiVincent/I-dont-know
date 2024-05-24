@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1f62d442792e24ba98c9f99f59f0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtColor: {r: 1, g: 0.216981, b: 0.216981, a: 1}
   model: {fileID: 3744393124641408651}
   animator: {fileID: 5620308369965287826}
   switchFungusEffect: {fileID: 3370361895682789903}
@@ -125,7 +126,7 @@ MonoBehaviour:
     atk: 0
     lv: 0
     critRate: 5
-    critDamage: 50
+    critDamagePercent: 50
     elementalMastery: 0
     moveSpeed: 0
     dashTime: 0
@@ -184,8 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f318d961f1af04cb974a8af0854f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCoolingES: 0
-  isCoolingEB: 0
+  eSTimeIsCooling: 0
+  eBTimeIsCooling: 0
+  eSTime_Cooldown: 0
+  eBTime_Cooldown: 0
 --- !u!1 &2971218078195421014
 GameObject:
   m_ObjectHideFlags: 0

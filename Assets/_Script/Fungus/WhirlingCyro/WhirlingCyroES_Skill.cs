@@ -21,12 +21,16 @@ public class WhirlingCyroES_Skill : ES_Skill
         whirlingCyroShield.Target = Target;
         int health = (int)fungusInfo.FungusData.health;
         whirlingCyroShield.Health = Helper.ShieldValue(health, ValuePercent);
+
+        FungusManager.Instance.isHaveShield = true;
     }
     protected override IEnumerator DisableCoroutine()
     {
         yield return new WaitForSeconds(SkillConfig.activeTime);
         if(whirlingCyroShield != null) whirlingCyroShield.gameObject.SetActive(false);
+        FungusManager.Instance.isHaveShield = false;
         gameObject.SetActive(false);
+
 
     }
 }

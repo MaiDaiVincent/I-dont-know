@@ -7,6 +7,7 @@ using static EventManager;
 
 public class FungusManager : Singleton<FungusManager>
 {
+    public bool isHaveShield = false;
     public bool IsRecoveringInteractSlot { get; private set; } = false;
     public bool CanInteractSlot { get; private set; } = true;
 

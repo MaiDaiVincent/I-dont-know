@@ -16,7 +16,6 @@ public class test2 : MonoBehaviour
     }
     public IEnumerator countA(float a, Test test)
     {
-        Debug.Log("a");
         float timer = a;
         while(timer > 0)
         {
@@ -29,7 +28,6 @@ public class test2 : MonoBehaviour
     }
     public IEnumerator countB(float a, Test test)
     {
-        Debug.Log("b");
         float timer = a;
         while (timer > 0)
         {

@@ -50,6 +50,7 @@ public class WhirlingPyroEB_Skill : EB_Skill
                 if (target.GetComponent<BossController>())
                 {
                     target.GetComponent<BossController>().rb2d.AddForce(knockbackForce * direction, ForceMode2D.Impulse);
+                    Debug.Log(direction);
                 }
 
                 fungusController.EB_State(false);

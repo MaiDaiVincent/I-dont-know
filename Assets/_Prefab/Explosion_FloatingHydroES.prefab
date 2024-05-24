@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3222630102798946780}
   - component: {fileID: 3125176058921557471}
   - component: {fileID: 6803231483154295846}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Explosion_FloatingHydroES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,5 +200,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1088
   detectionEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  detectionStayEvent:
     m_PersistentCalls:
       m_Calls: []

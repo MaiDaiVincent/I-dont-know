@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FungusInfoReader : MonoBehaviour
 {
+    public Color hurtColor;
+    public SpriteRenderer model;
 
-    [SerializeField] private SpriteRenderer model;
     [SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem switchFungusEffect;
     [SerializeField] private ParticleSystem shadowSwitchFungusEffect;
@@ -20,6 +21,7 @@ public class FungusInfoReader : MonoBehaviour
     private void Awake()
     {
         FungusController = GetComponent<FungusController>();
+
     }
 
     public void GetData(FungusData data)
@@ -54,4 +56,6 @@ public class FungusInfoReader : MonoBehaviour
     {
         animator.runtimeAnimatorController = animatorController;
     }
+
+
 }

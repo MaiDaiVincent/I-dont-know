@@ -43,6 +43,7 @@ public class WhirlingCyroShield : HealthBase
     public void OnDied()
     {
         gameObject.SetActive(false);
+        FungusManager.Instance.isHaveShield = false;
     }
 
 }

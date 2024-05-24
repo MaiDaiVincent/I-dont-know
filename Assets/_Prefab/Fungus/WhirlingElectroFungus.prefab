@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1f62d442792e24ba98c9f99f59f0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtColor: {r: 1, g: 0.216981, b: 0.216981, a: 1}
   model: {fileID: 6211961581184798487}
   animator: {fileID: 2254650569780776356}
   switchFungusEffect: {fileID: 8976575628151613998}
@@ -321,6 +322,7 @@ MonoBehaviour:
   eBTimeIsCooling: 0
   eSTime_Cooldown: 0
   eBTime_Cooldown: 0
+  whirlingElectroES_Skill: {fileID: 0}
 --- !u!1 &8559875891498196136
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6883356173034809584}
   - component: {fileID: -7978639963548520947}
   - component: {fileID: 3359017330447539151}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: EB_Skill 1
   m_TagString: FungusBullet
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087976268131381244}
   - component: {fileID: 7270069600738613831}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

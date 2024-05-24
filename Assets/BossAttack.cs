@@ -1,11 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    [SerializeField] private BossBullet bulletPrefab;
+    public BossSkill bossSkill1;
+    public BossSkill bossSkill2;
+    public BossSkill bossSkill3;
 
     private BossController bossController;
     public bool canAtk;
@@ -15,23 +16,82 @@ public class BossAttack : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(Attack());
+
+        canAtk = true;
     }
-    IEnumerator Attack()
+    public IEnumerator Skill1()
     {
-        while (canAtk)
+        canAtk = false;
+
+        var random = Random.Range(5, 10);
+        for(int i=0; i< random; i++)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
+            SpawnSkill1();
+        }
+        canAtk = true;
 
-            while (bossController.TargetDetector.Target() == null) yield return null;
+    }
+    public IEnumerator Skill2()
+    {
+        canAtk = false;
+        var random = Random.Range(3, 5);
+        for (int i = 0; i < random; i++)
+        {
+            yield return new WaitForSeconds(0.8f);
+            SpawnSkill2();
+        }
+        canAtk = true;
+    }
+    public IEnumerator Skill3()
+    {
+        canAtk = false;
 
-            BossBullet bullet = PoolManager.Instance.SpawnObj(bulletPrefab, transform.position, PoolType.BossBullet);
-            if(bullet != null)
-            {
-                bullet.target = bossController.TargetDetector.Target();
-                bullet.MoveToTarget();
-                bullet.GetBossInfo(bossController.BossInfo);
-            }
+        var random = Random.Range(10, 12);
+
+        for (int i = 0; i < random; i++)
+        {
+            yield return new WaitForSeconds(0.3f);
+            SpawnSkill3();
+        }
+        canAtk = true;
+    }
+    void SpawnSkill1()
+    {
+        if (bossController.TargetDetector.Target() == null) return;
+
+        BossSkill bossSkill = PoolManager.Instance.SpawnObj(bossSkill1, transform.position, PoolType.BossSkill1);
+        if (bossSkill != null)
+        {
+            bossSkill.target = bossController.TargetDetector.Target();
+            bossSkill.GetBossInfo(bossController.BossInfo);
+            bossSkill.ShowCaseSkill();
+        }
+    }
+    void SpawnSkill2()
+    {
+        if (bossController.TargetDetector.Target() == null) return;
+
+
+        BossSkill bossSkill = PoolManager.Instance.SpawnObj(bossSkill2, transform.position, PoolType.BossSkill2);
+        if (bossSkill != null)
+        {
+            bossSkill.target = bossController.TargetDetector.Target();
+            bossSkill.GetBossInfo(bossController.BossInfo);
+            bossSkill.ShowCaseSkill();
+        }
+    }
+    void SpawnSkill3()
+    {
+        if (bossController.TargetDetector.Target() == null) return;
+
+
+        BossSkill bossSkill = PoolManager.Instance.SpawnObj(bossSkill3, transform.position, PoolType.BossSkill3);
+        if (bossSkill != null)
+        {
+            bossSkill.target = bossController.TargetDetector.Target();
+            bossSkill.GetBossInfo(bossController.BossInfo);
+            bossSkill.ShowCaseSkill();
         }
     }
 }

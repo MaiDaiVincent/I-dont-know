@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7978639963548520947}
   - component: {fileID: 1143349599381050098}
   - component: {fileID: 787565772345051794}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: NA_Skill
   m_TagString: FungusBullet
   m_Icon: {fileID: 0}
@@ -169,6 +169,9 @@ MonoBehaviour:
   detectionEnterEvent:
     m_PersistentCalls:
       m_Calls: []
+  detectionStayEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &787565772345051794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576cab326a0c3f04faa6c40e17dff218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
   NAExplosionPrefab: {fileID: 6891930824014245391, guid: e791bfb53e22fc340b59a8180baa634e, type: 3}
 --- !u!1 &6915139857687338534
 GameObject:
@@ -193,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087976268131381244}
   - component: {fileID: 7270069600738613831}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

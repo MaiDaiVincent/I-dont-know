@@ -48,8 +48,6 @@ public class WhirlingElectroAttack : FungusAttack
         if (ES_Skill != null)
         {
             whirlingElectroES_Skill = ES_Skill.GetComponent<WhirlingElectroES_Skill>();
-            if (whirlingElectroES_Skill != null) Debug.Log("yes");
-            else Debug.Log("no");
 
             FungusInfoReader fungusInfo = fungusController.FungusInfo;
             Transform target = transform;

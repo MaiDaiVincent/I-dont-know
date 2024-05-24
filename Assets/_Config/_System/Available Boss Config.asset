@@ -20,7 +20,7 @@ MonoBehaviour:
   - bossNameType: 2
     config: {fileID: 11400000, guid: fc81d4c75e8da904dacc5a5ba45cd1a3, type: 2}
     stats: {fileID: 11400000, guid: 28fbb515b7d2dec4280b6e69e82908af, type: 2}
-    bossInfoReader: {fileID: 2487379171314821281, guid: b5e5bafaf6914d84c9154f9f78673141, type: 3}
+    bossInfoReader: {fileID: 2487379171314821281, guid: 325199518ea21504d964b797612d1b3b, type: 3}
   - bossNameType: 3
     config: {fileID: 11400000, guid: 33b1a80ff42fb2e41bcbc32106ec2dad, type: 2}
     stats: {fileID: 11400000, guid: 334a8fd0f441a094b93f3e4d5ffe77bc, type: 2}

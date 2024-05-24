@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1f62d442792e24ba98c9f99f59f0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtColor: {r: 1, g: 0.216981, b: 0.216981, a: 1}
   model: {fileID: 1678046299847638966}
   animator: {fileID: 2874143385428016506}
   switchFungusEffect: {fileID: 3469561303286005742}
@@ -209,7 +210,7 @@ MonoBehaviour:
     atk: 0
     lv: 0
     critRate: 5
-    critDamage: 50
+    critDamagePercent: 50
     elementalMastery: 0
     moveSpeed: 0
     dashTime: 0
@@ -268,6 +269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ecec5e3e773894ebb59fc93fb3a334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eSTimeIsCooling: 0
+  eBTimeIsCooling: 0
+  eSTime_Cooldown: 0
+  eBTime_Cooldown: 0
 --- !u!1 &4668412398670376274
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5477e06ae7bddf458b8f01529837365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventCalled: 0
+  isNA_ingEvent: 0
+  isES_ingEvent: 0
+  isEB_ingEvent: 0
   OnStartNA_SkillEvent:
     m_PersistentCalls:
       m_Calls: []

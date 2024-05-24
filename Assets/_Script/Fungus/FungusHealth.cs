@@ -22,6 +22,8 @@ public class FungusHealth : HealthBase
     }
     public override void TakeDamage(int value)
     {
+        if (FungusManager.Instance.isHaveShield) return;
+
         int damage = value;
 
         fungusData.health -= damage;
