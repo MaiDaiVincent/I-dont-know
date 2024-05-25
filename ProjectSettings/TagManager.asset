@@ -9,6 +9,8 @@ TagManager:
   - Wall
   - Fungus
   - FungusBullet
+  - FxTemporaire
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Boss
-  - 
+  - Enemy
   - 
   - Fungus
   - Environment
