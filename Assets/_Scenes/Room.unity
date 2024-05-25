@@ -7548,7 +7548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798702321640926701, guid: b2e3263bc60a44e428ec70101024fc94, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5798702321640926701, guid: b2e3263bc60a44e428ec70101024fc94, type: 3}
       propertyPath: m_TagString
@@ -7560,7 +7560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6543690316810593469, guid: b2e3263bc60a44e428ec70101024fc94, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6543690316810593469, guid: b2e3263bc60a44e428ec70101024fc94, type: 3}
       propertyPath: m_TagString
@@ -7743,6 +7743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10000
   healthSlider: {fileID: 0}
+  destroyDelay: 1
 --- !u!1 &1381719964
 GameObject:
   m_ObjectHideFlags: 0
