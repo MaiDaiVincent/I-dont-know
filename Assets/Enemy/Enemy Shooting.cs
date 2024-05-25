@@ -18,7 +18,6 @@ public class EnemyShooting : MonoBehaviour
         timer += Time.deltaTime;
 
         float distance = Vector2.Distance(transform.position, fungus.transform.position);
-        Debug.Log(distance);
         if (distance < 4)
         {
             timer += Time.deltaTime;
@@ -32,6 +31,7 @@ public class EnemyShooting : MonoBehaviour
         void shoot()
         {
             Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            AudioManager.Instance.PlayEnemyAttack();
         }
     }
 }

@@ -11,6 +11,7 @@ public class ManagerRoot : Singleton<ManagerRoot>
 
     [Space(20)]
     [SerializeField] private TransitionController transitionController;
+    [SerializeField] private Animator transitionAnim;
 
     public ManagerRootConfig ManagerRootConfig { get => managerRootConfig; }
     [SerializeField] private ManagerRootConfig managerRootConfig;
@@ -40,12 +41,31 @@ public class ManagerRoot : Singleton<ManagerRoot>
     }
     IEnumerator ProgressTransitionToScene(string sceneName)
     {
+
+        transitionController.gameObject.SetActive(true);
+        AudioManager.Instance.PlayTransition();
+
         yield return new WaitForSeconds(0.5f);
+
         var asyncOperator = SceneManager.LoadSceneAsync(sceneName);
         while (!asyncOperator.isDone)
         {
+            yield return new WaitForSeconds(0.5f);
+            transitionAnim.SetBool("IsOpen", true);
+            AudioManager.Instance.PlayTransition();
+
+
             float process = Mathf.Clamp01(asyncOperator.progress / 0.9f);
+            
+            yield return new WaitForSeconds(0.5f);
+            transitionController.gameObject.SetActive(false);
+
             yield return null;
         }
+    }
+    public void ResetData()
+    {
+        actionFungusNameList.Clear();
+        actionBossNameType = BossNameType.None;
     }
 }

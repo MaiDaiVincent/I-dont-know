@@ -78,6 +78,8 @@ public abstract class FungusController : MonoBehaviour
     }
     protected void Update()
     {
+        if (GameplayManager.Instance.isEndGame) return;
+
         UpdateInput();
         UpdateAnimation();
     }
@@ -163,6 +165,8 @@ public abstract class FungusController : MonoBehaviour
         IsPressDash = Input.GetMouseButtonDown(1);
         if (IsPressDash && CanDash)
         {
+            AudioManager.Instance.PlayDash();
+
             if (MoveDirection == Vector2.zero)
             {
                 SetDirectionInit();

@@ -27,6 +27,7 @@ public class BossAttack : MonoBehaviour
         for(int i=0; i< random; i++)
         {
             yield return new WaitForSeconds(0.2f);
+            AudioManager.Instance.PlayBossSkill1();
             SpawnSkill1();
         }
         canAtk = true;
@@ -39,6 +40,7 @@ public class BossAttack : MonoBehaviour
         for (int i = 0; i < random; i++)
         {
             yield return new WaitForSeconds(0.8f);
+            AudioManager.Instance.PlayBossSkill2();
             SpawnSkill2();
         }
         canAtk = true;
@@ -52,6 +54,7 @@ public class BossAttack : MonoBehaviour
         for (int i = 0; i < random; i++)
         {
             yield return new WaitForSeconds(0.3f);
+            AudioManager.Instance.PlayBossSkill3();
             SpawnSkill3();
         }
         canAtk = true;

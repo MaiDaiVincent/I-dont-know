@@ -37,6 +37,8 @@ public class BossHealth : HealthBase
         {
             bossData.health = 0;
             OnDiedEvent?.Invoke();
+            GameplayUI.Instance.KillBoss();
+
         }
     }
  

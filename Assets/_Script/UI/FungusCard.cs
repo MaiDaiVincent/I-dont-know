@@ -134,7 +134,9 @@ public class FungusCard : MonoBehaviour
     public void OnPointerClick()
     {
         transform.DOScale(1f, GameConfig.scaleCardDuration);
-        if(slotIndex == 0)
+        AudioManager.Instance.PlayOnClickButton();
+
+        if (slotIndex == 0)
         {
             SetBgOutlineColor(teamSetupUI.GetColor(BgColorOutlineType.normal));
         }

@@ -10,22 +10,22 @@ public class WhirlingPyroAttack : FungusAttack
 
         Debug.Log("eb");
 
-        SkillBase EB_SkillPrefab = EB_SkillConfig.skillPrefab;
+        //SkillBase EB_SkillPrefab = EB_SkillConfig.skillPrefab;
 
-        SkillBase EB_Skill;
-        EB_Skill = PoolManager.Instance.SpawnObj(EB_SkillPrefab, transform.position, PoolType.WhirlingPyroEB_Skill);
+        //SkillBase EB_Skill;
+        //EB_Skill = PoolManager.Instance.SpawnObj(EB_SkillPrefab, transform.position, PoolType.WhirlingPyroEB_Skill);
 
-        if (EB_Skill != null)
-        {
-            FungusInfoReader fungusInfo = fungusController.FungusInfo;
+        //if (EB_Skill != null)
+        //{
+        //    FungusInfoReader fungusInfo = fungusController.FungusInfo;
 
-            Transform target = fungusController.TargetDetector.Target();
+        //    Transform target = fungusController.TargetDetector.Target();
 
-            EB_Skill.GetInfo(fungusInfo, EB_SkillConfig);
-            EB_Skill.ShowcaseSkill(target, Vector2.down);
+        //    EB_Skill.GetInfo(fungusInfo, EB_SkillConfig);
+        //    EB_Skill.ShowcaseSkill(target, Vector2.down);
 
-            fungusManager.StartEB_Cooldown(this);
-        }
+        //    fungusManager.StartEB_Cooldown(this);
+        //}
     }
 
     public override void ES_Skill()

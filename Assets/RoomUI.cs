@@ -19,6 +19,7 @@ public class RoomUI : MonoBehaviour
     }
     private void OnReturnClick()
     {
+        managerRoot.ResetData();
         managerRoot.TransitionToScene(managerRoot.ManagerRootConfig.home);
 
     }

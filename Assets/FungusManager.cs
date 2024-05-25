@@ -43,6 +43,7 @@ public class FungusManager : Singleton<FungusManager>
     }
     public void Update()
     {
+        if (GameplayManager.Instance.isEndGame) return;
         InputSwitchSlot();
     }
 
@@ -232,6 +233,7 @@ public class FungusManager : Singleton<FungusManager>
                 return i;
             }
         }
+        GameplayUI.Instance.SetEnd();
         return -1;
     }
 

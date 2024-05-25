@@ -14,18 +14,22 @@ public class Spawn
 [Serializable]
 public class Wave
 {
-    public bool isEndWave = false;
+    public bool isSpawned = false;
     public List<Spawn> spawnList;
 }
 
 public class SpawnerManager : Singleton<SpawnerManager>
 {
+    public bool bossSpawned = false;
     public Wave currentWave;
 
+    [SerializeField] private CircleCheck circleCheck;
+
     [SerializeField] private Transform root; //obj player holder
+    
+    public List<Wave> waveList;
 
-    [SerializeField] private List<Wave> waveList;
-
+    private Coroutine spawnEnemyCoroutine;
     private ManagerRoot managerRoot => ManagerRoot.Instance;
     private EnemyManager enemyManager => EnemyManager.Instance;
     private void Start()
@@ -34,8 +38,8 @@ public class SpawnerManager : Singleton<SpawnerManager>
     }
     void Init()
     {
-        SpawnBossInit();
-        //SpawnWave();
+        //SpawnBossInit();
+        SpawnWave();
         SpawnFungusInit();
     }
     public void SpawnFungusInit()
@@ -93,7 +97,9 @@ public class SpawnerManager : Singleton<SpawnerManager>
 
     public void SpawnBossInit()
     {
-        if (managerRoot == null) return;
+        if (managerRoot == null || bossSpawned) return;
+
+        bossSpawned = true;
 
         BossNameType actionBossNameType = managerRoot.actionBossNameType;
         AvailableBossConfig availableBossConfig = managerRoot.ManagerRootConfig.availableBossConfig;
@@ -128,26 +134,52 @@ public class SpawnerManager : Singleton<SpawnerManager>
         }
         foreach (var wave in waveList)
         {
-            if (!wave.isEndWave)
+            if (!wave.isSpawned)
             {
+                wave.isSpawned = true;
                 currentWave = wave;
-                SpawnEnemy(wave.spawnList);
+
+
+                if (spawnEnemyCoroutine != null) StopCoroutine(spawnEnemyCoroutine);
+                spawnEnemyCoroutine = StartCoroutine(SpawnEnemy(wave.spawnList));
+
                 break;
             }
         }
     }
-    public void SpawnEnemy(List<Spawn> spawnList)
+    IEnumerator SpawnEnemy(List<Spawn> spawnList)
     {
+        Debug.Log(spawnList.Count);
         for (int i = 0; i < spawnList.Count; i++)
         {
             var spawn = spawnList[i];
-            var enemy = Instantiate(spawn.enemyPrefab, spawn.spawnPoint);
+            var check = Instantiate(circleCheck, spawn.spawnPoint);
+            check.transform.position = spawn.spawnPoint.position;
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        for (int i = 0; i < spawnList.Count; i++)
+        {
+            var spawn = spawnList[i];
+            GameObject enemy;
+            enemy = Instantiate(spawn.enemyPrefab);
             enemy.transform.SetParent(enemyManager.enemyHolder.transform);
+            enemy.transform.position = spawn.spawnPoint.position;
         }
     }
     bool WaveEnded()
     {
-        if (enemyManager.enemyHolder.transform.childCount == 0) return true;
+        bool end = true;
+        var enemyHolder = enemyManager.enemyHolder;
+
+        for(int i =0; i< enemyHolder.transform.childCount; i++)
+        {
+            var enemyHealth = enemyHolder.transform.GetChild(i).GetComponent<EnemyHealth>();
+            if (!enemyHealth.isDead) end = false;
+        }
+        Debug.Log(end);
+        if (end) return true;
         return false;
     }
 

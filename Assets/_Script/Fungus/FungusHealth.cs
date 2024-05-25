@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FungusHealth : HealthBase
 {
-    private FungusData fungusData;
+    public FungusData fungusData { get; private set; }
     private void Awake()
     {
         EventManager.onSwitchFungus += OnSwitchFungus;

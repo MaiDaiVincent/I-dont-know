@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -24,5 +25,12 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerUp(PointerEventData eventData)
     {
         transform.DOScale(1f, GameConfig.scaleCardDuration);
+
+        AudioManager.Instance.PlayOnClickButton();
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "Room")
+        {
+            AudioManager.Instance.PlayTheme();
+        }
     }
 }

@@ -43,6 +43,10 @@ public abstract class FungusAttack : MonoBehaviour
     }
     public virtual void NA_Skill()
     {
+
+        AudioManager.Instance.PlayFungusShoot();
+
+
         SkillBase NA_SkillPrefab = NA_SkillConfig.skillPrefab;
 
         SkillBase NA_Skill;

@@ -8,6 +8,8 @@ public class FloatingHydroAttack : FungusAttack
     {
         if (eBTimeIsCooling > 0) return;
 
+        AudioManager.Instance.PlayFungusShoot();
+
         SkillBase EB_SkillPrefab = EB_SkillConfig.skillPrefab;
 
         SkillBase EB_Skill;
@@ -39,6 +41,9 @@ public class FloatingHydroAttack : FungusAttack
     public override void ES_Skill()
     {
         if (eSTimeIsCooling > 0) return;
+
+        AudioManager.Instance.PlayFungusShoot();
+
 
         SkillBase ES_SkillPrefab = ES_SkillConfig.skillPrefab;
 

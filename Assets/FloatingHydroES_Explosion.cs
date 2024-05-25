@@ -36,6 +36,7 @@ public class FloatingHydroES_Explosion : MonoBehaviour
     }
     IEnumerator DisableCoroutine()
     {
+        AudioManager.Instance.PlayExplosion();
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
     }

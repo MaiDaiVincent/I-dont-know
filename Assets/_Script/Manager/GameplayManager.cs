@@ -6,5 +6,10 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class GameplayManager : Singleton<GameplayManager>
 {
+    public bool isEndGame = false;
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayCombatTheme();
+    }
 }

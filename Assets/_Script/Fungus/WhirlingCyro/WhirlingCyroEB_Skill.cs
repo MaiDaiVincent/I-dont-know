@@ -61,6 +61,7 @@ public class WhirlingCyroEB_Skill : EB_Skill
     {
         if (obj.GetComponent<HealthBase>())
         {
+            AudioManager.Instance.PlayEnemyAttack();
             CauseDamage(obj);
             polygonCollider2D.enabled = false;
 

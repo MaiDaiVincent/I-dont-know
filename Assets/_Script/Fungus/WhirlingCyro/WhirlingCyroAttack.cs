@@ -34,6 +34,8 @@ public class WhirlingCyroAttack : FungusAttack
     {
         if (eSTimeIsCooling > 0) return;
 
+        AudioManager.Instance.PlayBuff();
+
         SkillBase ES_SkillPrefab = ES_SkillConfig.skillPrefab;
 
         SkillBase ES_Skill;

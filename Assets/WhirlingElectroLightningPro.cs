@@ -58,6 +58,8 @@ public class WhirlingElectroLightningPro : MonoBehaviour
             int critDamage = Helper.CritDamage(data.atk, data.critDamagePercent);
             int damage = Helper.CauseDamage(data.atk, canCrit, critDamage, SkillConfig.valuePercent);
             obj.GetComponent<HealthBase>().TakeDamage(damage);
+            AudioManager.Instance.PlayElec();
+
 
             Color color = FungusInfo.FungusData.fungusConfig.fungusColor;
             Vector2 collisionPos = obj.transform.position;

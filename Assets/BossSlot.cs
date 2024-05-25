@@ -53,6 +53,8 @@ public class BossSlot : MonoBehaviour
     }
     private void OnSelectBossClick()
     {
+        AudioManager.Instance.PlayOnClickButton();
+
         EventManager.ActionOnSelectBoss(this);
     }
 

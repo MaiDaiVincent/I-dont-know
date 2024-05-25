@@ -39,6 +39,9 @@ public class enemyattack : MonoBehaviour
        
 
         FungusHealth fungusHealth = fungusTransform.GetComponent<FungusHealth>();
+
+        if (fungusHealth.fungusData.health <= 0) return;
+
         if (fungusHealth != null)
         {
             fungusHealth.TakeDamage((int)attackDamage);
@@ -46,6 +49,7 @@ public class enemyattack : MonoBehaviour
         Animator enemyAnimator = GetComponent<Animator>();
         if (enemyAnimator != null)
         {
+            AudioManager.Instance.PlayEnemyAttack();
             enemyAnimator.SetTrigger("Attack");
         }
 
