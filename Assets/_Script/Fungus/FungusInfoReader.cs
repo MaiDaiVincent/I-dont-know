@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class FungusInfoReader : MonoBehaviour
@@ -7,7 +6,7 @@ public class FungusInfoReader : MonoBehaviour
     public Color hurtColor;
     public SpriteRenderer model;
 
-    [SerializeField] private Animator animator;
+    //[SerializeField] private Animator animator;
     [SerializeField] private ParticleSystem switchFungusEffect;
     [SerializeField] private ParticleSystem shadowSwitchFungusEffect;
 
@@ -30,7 +29,7 @@ public class FungusInfoReader : MonoBehaviour
 
         GetModel(FungusData.fungusConfig.fungusModelSprite, FungusData.fungusConfig.dissolveMaterial);
 
-        GetAnimatorController(this.FungusData.fungusConfig.animatorController);
+       // GetAnimatorController(this.FungusData.fungusConfig.animatorController);
 
         GetParticleGradient(this.FungusData.fungusConfig.gradientParticle);
 
@@ -52,10 +51,10 @@ public class FungusInfoReader : MonoBehaviour
         model.sprite = sprite;
         model.material = material;
     }
-    void GetAnimatorController(AnimatorController animatorController)
-    {
-        animator.runtimeAnimatorController = animatorController;
-    }
+    //void GetAnimatorController(AnimatorController animatorController)
+    //{
+    //    animator.runtimeAnimatorController = animatorController;
+    //}
 
 
 }

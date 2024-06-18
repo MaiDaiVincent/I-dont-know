@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 [CreateAssetMenu(fileName = "New Fungus Config", menuName = "Config/Fungus")]
 public class FungusConfig : ScriptableObject
@@ -19,8 +18,8 @@ public class FungusConfig : ScriptableObject
 
     public Material dissolveMaterial;
 
-    public UnityEditor.Animations.AnimatorController animatorController;
-    
+    //public UnityEditor.Animations.AnimatorController animatorController;
+
     public Elemental fungusElemental;
 
 }

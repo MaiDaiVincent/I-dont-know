@@ -6542,12 +6542,8 @@ MonoBehaviour:
       spawnPoint: {fileID: 775384827}
     - enemyPrefab: {fileID: 7013545035329152973, guid: 2e435b665622de343b1ca0b021efac00, type: 3}
       spawnPoint: {fileID: 499806504}
-    - enemyPrefab: {fileID: 7013545035329152973, guid: 2e435b665622de343b1ca0b021efac00, type: 3}
-      spawnPoint: {fileID: 487167888}
   - isSpawned: 0
     spawnList:
-    - enemyPrefab: {fileID: 9004923742979792429, guid: bd6bc43323d1a6948998876016eb87ad, type: 3}
-      spawnPoint: {fileID: 775384827}
     - enemyPrefab: {fileID: 9004923742979792429, guid: bd6bc43323d1a6948998876016eb87ad, type: 3}
       spawnPoint: {fileID: 499806504}
     - enemyPrefab: {fileID: 7145075974422384293, guid: 2dacb7cea5570184a8cd0575eece3488, type: 3}
